@@ -19,7 +19,9 @@ if not message:
 driver = webdriver.Firefox()
 driver.get("https://web.whatsapp.com")
 time.sleep(30)
-search_bar = driver.find_element_by_xpath("/html/body/div[1]/div/div/div[3]/div/div[1]/div/label/input")
+search_bar = driver.find_element_by_xpath(
+    "/html/body/div[1]/div/div/div[3]/div/div[1]/div/label/input"
+)
 search_bar.clear()
 search_bar.send_keys(contact_name)
 search_bar.send_keys(Keys.RETURN)
